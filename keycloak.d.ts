@@ -58,7 +58,7 @@ declare namespace KeycloakConnect {
      * @param {String} username The username.
      * @param {String} password The cleartext password.
      */
-    obtainDirectly(username: string, password: string): Promise<Grant>
+    obtainDirectly(username: string, password: string,  callback?: (err: Error, grant: Grant), scopeParam?: string): Promise<Grant>
 
     /**
      * Obtain a grant from a previous interactive login which results in a code.
